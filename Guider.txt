@@ -1,0 +1,17 @@
+#pour lancer le projet ou aprés chaque changement dans le code appliqués les commandes suivantes :
+
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+pip freeze > requirements.txt
+docker-compose build web
+docker-compose up -d
+docker-compose down
+docker-compose build
+docker-compose up -d
+docker-compose restart web
+
+#ou depuis terminal (venv)
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
