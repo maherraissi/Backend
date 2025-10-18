@@ -1,5 +1,6 @@
 #pour lancer le projet ou aprés chaque changement dans le code appliqués les commandes suivantes :
 
+venv\Scripts\activate 
 docker-compose exec web python manage.py makemigrations
 docker-compose exec web python manage.py migrate
 pip freeze > requirements.txt
@@ -11,6 +12,7 @@ docker-compose up -d
 docker-compose restart web
 
 #ou depuis terminal (venv)
+venv\Scripts\activate 
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
